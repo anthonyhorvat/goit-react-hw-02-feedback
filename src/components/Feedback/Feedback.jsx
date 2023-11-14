@@ -3,6 +3,7 @@ import Statistic from './Statistic/Statistic';
 import FeedbackOptions from './FeedbackOptions/FeedbackOptions';
 import Section from 'components/Section/Section';
 import Notification from './Notification/Notification';
+import { StyledContainer } from './Feedback.styled';
 
 class Feedback extends Component {
   state = { good: 0, neutral: 0, bad: 0 };
@@ -31,7 +32,7 @@ class Feedback extends Component {
     const feedbackOptions = ['good', 'neutral', 'bad'];
 
     return (
-      <div>
+      <StyledContainer>
         <Section title="Please leave feedback">
           <FeedbackOptions
             options={feedbackOptions}
@@ -51,7 +52,7 @@ class Feedback extends Component {
             />
           )}
         </Section>
-      </div>
+      </StyledContainer>
     );
   }
 }
